@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\naugh\\source\\repos\\SpotifyConsumeAPI\\SpotifyConsumeAPI.csproj": {}
+    "C:\\Users\\Daniel.Naughton\\source\\repos\\SpotifyConsumeAPI\\SpotifyConsumeAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\naugh\\source\\repos\\SpotifyConsumeAPI\\SpotifyConsumeAPI.csproj": {
+    "C:\\Users\\Daniel.Naughton\\source\\repos\\SpotifyConsumeAPI\\SpotifyConsumeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\naugh\\source\\repos\\SpotifyConsumeAPI\\SpotifyConsumeAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel.Naughton\\source\\repos\\SpotifyConsumeAPI\\SpotifyConsumeAPI.csproj",
         "projectName": "SpotifyConsumeAPI",
-        "projectPath": "C:\\Users\\naugh\\source\\repos\\SpotifyConsumeAPI\\SpotifyConsumeAPI.csproj",
-        "packagesPath": "C:\\Users\\naugh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\naugh\\source\\repos\\SpotifyConsumeAPI\\obj\\",
+        "projectPath": "C:\\Users\\Daniel.Naughton\\source\\repos\\SpotifyConsumeAPI\\SpotifyConsumeAPI.csproj",
+        "packagesPath": "C:\\Users\\Daniel.Naughton\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Daniel.Naughton\\source\\repos\\SpotifyConsumeAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\naugh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Daniel.Naughton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

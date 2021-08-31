@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using SpotifyConsumeAPI.Models;
+using SpotifyConsumeAPI.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,16 +13,40 @@ namespace SpotifyConsumeAPI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ISpotifyAccountService _spotifyAccountService;
+        private readonly IConfiguration _configuration;
+        private readonly ISpotifyService _spotifyService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ISpotifyAccountService spotifyAccountService, IConfiguration configuration, ISpotifyService spotifyService)
         {
-            _logger = logger;
+            _spotifyAccountService = spotifyAccountService;
+            _configuration = configuration;
+            _spotifyService = spotifyService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var newReleases = await GetReleases();
+
+            return View(newReleases);
+        }
+
+        private async Task<IEnumerable<Release>> GetReleases()
+        {
+            try
+            {
+                var token = await _spotifyAccountService.GetToken(_configuration["Spotify:ClientId"], _configuration["Spotify:ClientSecret"]);
+
+                var newRelease = await _spotifyService.GetNewRelease("US", 20, token);
+
+                return newRelease;
+            }
+            catch (Exception ex)
+            {
+                Debug.Write(ex);
+
+                return Enumerable.Empty<Release>();
+            }
         }
 
         public IActionResult Privacy()
